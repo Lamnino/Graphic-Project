@@ -1,0 +1,3 @@
+D:\New folder\Graphic\x64\Debug\Graphic.exe
+D:\New folder\Graphic\x64\Debug\Graphic.vcxproj.CopyComplete
+D:\New folder\Graphic\x64\Debug\freeglutd.dll

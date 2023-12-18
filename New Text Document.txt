@@ -1,0 +1,113 @@
+#include <iostream>
+#include <cmath>
+#include "Vector3D.h"
+#include "Camera.h"
+#include "World3D.h"
+using namespace std;
+
+#include <iostream>
+#include <cmath>
+#include "Vector3D.h"
+#include "Camera.h"
+#include "World3D.h"
+#include <GL/glut.h>
+using namespace std;
+
+int WINDOW_WIDTH = 600;
+const int WINDOW_HEIGHT = 400;
+// Hàm vẽ tam giác
+void drawTriangle()
+{
+    // Tạo ba điểm A, B và C
+    Vector3D PosCam(-5.0, 0.0, 0.0);
+    Vector3D TarCam(0.0, 0.0, 0.0);
+
+    float color[3] = { 1.0, 0.0, 0.0 };
+	glColor3fv(color);
+	glBegin(GL_TRIANGLES);
+    vector<Vector3D> listpoint;
+    Vector3D A(1.0, 2.0, -1.0);
+    Vector3D B(2.0, 1.0, 0.0);
+    Vector3D C(1.5, -1.0, 0.0);
+    listpoint.push_back(A);
+    listpoint.push_back(B);
+    listpoint.push_back(C);
+    World3D world(PosCam, TarCam);
+    vector<Vector3D> s = world.triangleTo2D(listpoint, world.cam);
+    for (int i = 0; i < s.size(); i++)
+    {
+        cout << s[i];
+        glVertex2i(s[i].z, s[i].y);
+    }
+    glEnd();
+}
+
+// Hàm hiển thị
+void display()
+{
+    glClear(GL_COLOR_BUFFER_BIT);
+    glColor3f(1.0, 1.0, 1.0); // Màu trắng
+    glLoadIdentity();
+
+    glPointSize(1.0); // Đặt kích thước điểm
+
+    drawTriangle();
+
+    glFlush();
+    glutSwapBuffers();
+}
+
+void reshape(int width, int height) {
+    glViewport(0, 0, width, height);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluOrtho2D(-500, 500, -500, 500);
+    glMatrixMode(GL_MODELVIEW);
+}
+int main(int argc, char** argv)
+{
+    glutInit(&argc, argv);
+    glutInitWindowSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+    glutCreateWindow("Polygon");
+
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+
+    glutDisplayFunc(display);
+    glutReshapeFunc(reshape);
+
+    glutMainLoop();
+    Camera cam = Camera();
+
+    return 0;
+
+    return 0;
+}
+
+
+
+//draw triangle
+void drawTriangle()
+{
+    // Tạo ba điểm A, B và C
+    Vector3D PosCam(-5.0, 0.0, 0.0);
+    Vector3D TarCam(0.0, 0.0, 0.0);
+
+    float color[3] = { 1.0, 0.0, 0.0 };
+    glColor3fv(color);
+    vector<Vector3D> listpoint;
+    Vector3D A(0, 0, -1.0);
+    Vector3D B(0, 0, 2);
+    Vector3D C(20, 2, -0.5);
+    listpoint.push_back(A);
+    listpoint.push_back(B);
+    listpoint.push_back(C);
+    World3D world(PosCam, TarCam);
+    vector<Vector3D> s = world.triangleTo2D(listpoint, world.cam);
+    glBegin(GL_TRIANGLES);
+    for (int i = 0; i < s.size(); i++)
+    {
+        cout << s[i];
+        glVertex2i(s[i].z, s[i].y);
+    }
+    glEnd();
+}
