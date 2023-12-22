@@ -3,17 +3,23 @@
 #define PIXEL_H
 
 #include "Vector3D.h"
+#include <iostream>
+
 class Pixel {
 public:
-	Vector3D pos;
+	float dept;
 	float color[3];
 
 	Pixel() {
-		pos = Vector3D();
+		dept = 100000;
 		for (int i = 0; i < 3; i++) color[i] = 0;
 	}
-	Pixel(int x, int y, float color[]);
-	Pixel(int x, int y,int z, float color[]);
+	Pixel(float color[]);
+	Pixel(float dept, float color[]);
+
+	Pixel operator=(const Pixel& other);
+
+	void DrawPixel(int x, int y);
 };
 
 #endif  // VECTOR3D_H#pragma once

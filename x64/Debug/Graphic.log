@@ -1,26 +1,20 @@
-﻿  Camera.cpp
-D:\New folder\Graphic\Camera.cpp(14,43): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
-D:\New folder\Graphic\Camera.cpp(14,16): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
-D:\New folder\Graphic\Camera.cpp(24,43): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
-D:\New folder\Graphic\Camera.cpp(24,16): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
-  Main.cpp
-D:\New folder\Graphic\Main.cpp(75,17): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\New folder\Graphic\Main.cpp(84,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-  pixel.cpp
-D:\New folder\Graphic\pixel.cpp(6,20): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\New folder\Graphic\pixel.cpp(6,17): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\New folder\Graphic\pixel.cpp(15,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\New folder\Graphic\pixel.cpp(15,20): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\New folder\Graphic\pixel.cpp(15,17): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Shape.cpp
-D:\New folder\Graphic\Shape.cpp(20,32): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-D:\New folder\Graphic\Shape.cpp(20,24): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-D:\New folder\Graphic\Shape.cpp(36,32): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-D:\New folder\Graphic\Shape.cpp(36,24): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-D:\New folder\Graphic\Shape.cpp(54,32): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-D:\New folder\Graphic\Shape.cpp(54,24): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-  World3D.cpp
-  Generating Code...
+﻿  Shape.cpp
+D:\New folder\Graphic\Shape.cpp(22,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\New folder\Graphic\Shape.cpp(26,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\New folder\Graphic\Shape.cpp(54,24): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+D:\New folder\Graphic\Shape.cpp(75,60): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+D:\New folder\Graphic\Shape.cpp(75,76): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+D:\New folder\Graphic\Shape.cpp(79,52): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+D:\New folder\Graphic\Shape.cpp(79,68): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+D:\New folder\Graphic\Shape.cpp(81,52): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+D:\New folder\Graphic\Shape.cpp(81,68): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+D:\New folder\Graphic\Shape.cpp(90,24): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\New folder\Graphic\Shape.cpp(106,56): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+D:\New folder\Graphic\Shape.cpp(106,72): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+D:\New folder\Graphic\Shape.cpp(108,48): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+D:\New folder\Graphic\Shape.cpp(108,64): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+D:\New folder\Graphic\Shape.cpp(109,48): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+D:\New folder\Graphic\Shape.cpp(109,64): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
   Graphic.vcxproj -> D:\New folder\Graphic\x64\Debug\Graphic.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

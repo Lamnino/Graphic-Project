@@ -33,7 +33,6 @@ Vector3D Camera::up()
 {
 	Vector3D pointToUp = pos + Vector3D(0.0f, 1.0f, 0.0f);
 	float angle = pos.angle3Point(tar, pointToUp);
-	std::cout << angle;
 	if (angle < Vector3D::PI/2)
 	{
 		float lengthAE = std::cos(angle) * Vector3D::length(pos, pointToUp);

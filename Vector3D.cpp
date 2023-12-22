@@ -30,6 +30,11 @@ Vector3D Vector3D::operator+(const Vector3D& other) const {
 	return Vector3D(x + other.x, y + other.y, z + other.z);
 }
 
+Vector3D Vector3D::operator=(const Vector3D& other) {
+	x = other.x; y = other.y; z = other.z;
+	return *this;
+}
+
 float Vector3D::length(const Vector3D& A, const Vector3D& B)
 {
 	Vector3D AB(B.x - A.x, B.y - A.y, B.z - A.z);
@@ -65,5 +70,11 @@ Vector3D Vector3D::normalize(const Vector3D& B)
 {
 	float length = Vector3D::length(B);
 	return Vector3D(B.x / length, B.y / length, B.z / length);
+}
+
+void Vector3D::swap(Vector3D& A, Vector3D& B)
+{
+	Vector3D medium = A;
+	A = B; B = A;
 }
 

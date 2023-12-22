@@ -18,12 +18,14 @@ public:
     Vector3D operator*(const Vector3D& other) const;
     Vector3D operator*(float num) const;
     Vector3D operator+(const Vector3D& other) const;
+    Vector3D operator=(const Vector3D& other);
     
     static Vector3D normalize(const Vector3D& B);
     float angle3Point(const Vector3D& B, const Vector3D& C) const;
     static float length(const Vector3D& A, const Vector3D& B);
     static float length(const Vector3D& A);
     static float dot(const Vector3D& A, const Vector3D& B);
+    static void swap(Vector3D& A, Vector3D& B);
 };
 
 #endif  // VECTOR3D_H
