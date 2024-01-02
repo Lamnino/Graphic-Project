@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Vector3D.h"
 #include <cmath>
+#include <GL/glut.h>
 
 Camera::Camera() { pos = Vector3D(); tar = Vector3D(); dis = 0; heigth = 0; width = 0; }
 Camera::Camera(Vector3D pos, Vector3D tar)
@@ -22,6 +23,7 @@ Camera::Camera(Vector3D pos, Vector3D tar,float heigth, float width)
 	this->heigth = heigth;
 	this->width = width;
 	screen.resize(heigth, std::vector<Pixel>(width));
+
 }
 
 Vector3D Camera::look()

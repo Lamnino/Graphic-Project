@@ -22,4 +22,4 @@ public:
 	void DrawPixel(int x, int y);
 };
 
-#endif  // VECTOR3D_H#pragma once
+#endif  // PIXEL_H#pragma once

@@ -3,11 +3,13 @@
 #include "Camera.h"
 #include <iostream>
 #include "cmath"
+#include <string.h>
 
 World3D::World3D(Vector3D pos, Vector3D tar)
 {
 	cam = Camera(pos, tar);
 }
+
 
 Vector3D World3D::PointTo2D(Vector3D point, Camera cam)
 {
@@ -18,7 +20,6 @@ Vector3D World3D::PointTo2D(Vector3D point, Camera cam)
 	projectionpoint = projectionpoint - center;
 	projectionpoint.x = projectionpoint.z;
 	projectionpoint.z = dept;
-	//std::cout << projectionpoint <<";";
 	return projectionpoint;
 }
 

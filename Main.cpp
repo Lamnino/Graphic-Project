@@ -6,6 +6,8 @@
 #include "World3D.h"
 #include <GL/glut.h>
 #include "Shape.h"
+#include <string>
+
 using namespace std;
 
 int WINDOW_WIDTH = 600;
@@ -16,10 +18,9 @@ const int WINDOW_HEIGHT = 400;
 // Hàm hiển thị
 void display()
 {
-    // Tạo ba điểm A, B và C
-    Vector3D PosCam(-2, 2, 2);
+    // Init camera inform
+    Vector3D PosCam(-3, 3, 3);
     Vector3D TarCam(0.0, 0.0, 0.0);
-    
 
     std::vector<Vector3D> listpoint1;
     std::vector<Vector3D> listpoint2;
@@ -42,18 +43,17 @@ void display()
     listpoint1.push_back(G);
     listpoint1.push_back(H);
 
-
+    // Init 3d World
     World3D world(PosCam, TarCam);
 
     glClear(GL_COLOR_BUFFER_BIT);
-    glColor3f(1.0, 1.0, 1.0); // Màu trắng
+    glColor3f(1.0, 1.0, 1.0); 
     glLoadIdentity();
 
-    glPointSize(1.0); // Đặt kích thước điểm
+    glPointSize(1.0); 
     float red[3] = { 1.0, 0.0, 0.0 };
     float blue[3] = { 0.0, 0.0, 1.0 };
     Shape::drawCube(world, listpoint1);
-    //Shape::drawTriangle(world, listpoint2, blue);
 
     glFlush();
     glEnd();
@@ -71,7 +71,7 @@ void reshape(int width, int height) {
 int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitWindowSize(WINDOW_WIDTH, WINDOW_HEIGHT);
-    glutCreateWindow("Polygon");
+    glutCreateWindow("Z-buffer - cube");
 
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 

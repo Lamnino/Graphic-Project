@@ -5,6 +5,7 @@
 #include "Pixel.h"
 #include "Vector3D.h"
 #include <vector>
+#include <string>
 
 class Camera {
 public:
@@ -23,4 +24,4 @@ public:
     Vector3D center();
 };
 
-#endif  // VECTOR3D_H#pragma once
+#endif  // CAMERA_H#pragma once
